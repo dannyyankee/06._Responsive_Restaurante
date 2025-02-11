@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-variant: small-caps;
+    color: #60C3DB;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(248, 248, 246);
+}
+
+.header {
+    grid-area: header;
+}
+
+.about {
+    grid-area: about;
+}
+
+.gallery {
+    grid-area: gallery;
+}
+
+.service {
+    grid-area: service;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.container {
+    min-width: 460px;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+ /*    grid-template-rows: repeat (3, 1fr); */
+    grid-template-areas: "header" "about" "footer";
+}
+
+/* Header */
+
+.nav {
+    grid-area: nav;
+}
+
+.header-text {
+    grid-area: header-text;
+}
+
+.headerpeque {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 85% 10%;
+    grid-template-areas: 
+    "header-text" 
+    "nav";
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, rgba(20, 16, 16, 0.5), rgba(20, 16, 16, 0.3)), url(../image/portadaarriba.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:none;
+}
+
+.header-text {
+    color: rgb(253, 253, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.header-text__h1 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.header-text__h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.headerpeque__h1,.headerpeque__h2  {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #60C3DB;
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background: rgba(206, 222, 226, 0.7);
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+.nav__link {
+    display: block;
+    text-align: center;
+    color: rgb(61, 55, 55);
+    text-decoration: none;
+    padding: 0.25em;
+    margin: 0.2em;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+/* About*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background-color: rgba(206, 222, 226, 0.7);
+}
+
+.gallery__title, .service__title {
+    font-size: 1rem;
+}
+
+.about__title {
+    font-size: 2rem;
+    display: none;
+}
+
+.about__subtitle {
+    width: 80%;
+    display: none;
+}
+
+.about__container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+.about__image {
+    border-radius: 0.25rem;
+}
+
+.about__social {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.about-texts__text--gray {
+    display: none;
+}
+
+.about__img--social {
+    width: 25px;
+    margin-left: 0.5rem;
+    filter: grayscale(1);
+    display: none;
+}
+
+.about__img--social:hover {
+    filter: grayscale(0);
+}
+
+.about__buttons {
+    margin: 3rem 0;
+    display:none;
+}
+
+.about__button {
+    background: none;
+    border: 1px solid #60C3DB;
+    border-radius: 0.25rem;
+    width: 130px;
+    padding: 0.5rem 0;
+    margin-left: 0.5rem;
+    color: #60C3DB;
+    font-size: 1rem;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.about-texts__header {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.about-texts__span {
+    display: inline-block;
+    background: #60C3DB;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.about-texts__text {
+    color: gray;
+}
+
+.about-texts__text--color {
+    color: #C39;
+    font-size: 1.4rem;
+    margin: 0 0 2rem 0;
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 20px 0;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.footer__img {
+    padding-right: 0.5rem;
+    max-width: 35px;
+}
+
+.footer__text {
+    font-size: 0.75rem;
+    margin: 20px 20px 0 0;
+    color: #9e9797;
+}
